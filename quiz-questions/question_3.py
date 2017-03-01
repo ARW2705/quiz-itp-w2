@@ -47,7 +47,7 @@ def eldest_customer_per_state(customers):
         for i in value:
             if 'age' not in final_dict[key]:
                 final_dict[key] = i
-            if i['age'] > final_dict[key]['age']:
+            elif i['age'] > final_dict[key]['age']:
                 final_dict[key] = i
     return final_dict           
 
