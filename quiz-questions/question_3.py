@@ -41,8 +41,7 @@ def eldest_customer_per_state(customers):
     # Write your code here
     final_dict = {}
     for key, value in customers.items():
-        if key not in final_dict:
-            final_dict[key] = {}
+        final_dict[key] = {}
         if value == []:
             final_dict[key] = None
         for i in value:
@@ -50,7 +49,6 @@ def eldest_customer_per_state(customers):
                 final_dict[key] = i
             if i['age'] > final_dict[key]['age']:
                 final_dict[key] = i
-    print(final_dict)
     return final_dict           
 
 
